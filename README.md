@@ -1,4 +1,4 @@
-# 05-Challenge (Trilogy Skills Bootcamp: Week 05 - Challenge)
+# Lockandkeys-Password-Generator (Trilogy Skills Bootcamp: Week 05 - Challenge)
 
 ## Important Notes
 The methods I selected to implement in the Javascript file were to reflect what we had learnt in week 5 of the course.
@@ -9,7 +9,7 @@ Locally the project ran fine with linking resources such as:
 > link rel="stylesheet" type="text/css" href="./assets/css/style.css"
 
 However GitHub Pages was not functioning with said links, and was edited to be linked as:
-> link rel="stylesheet" type="text/css" href="../05-Challenge/assets/css/style.css"
+> link rel="stylesheet" type="text/css" href="../Lockandkeys-Password-Generator/assets/css/style.css"
 
 <br>
 
@@ -50,8 +50,8 @@ The following image shows the web application's appearance and functionality:
 
 ___
 ## URL
-* The URL of the deployed application: https://lulose.github.io/05-Challenge/
-* The URL of the GitHub Repository: https://github.com/lulose/05-Challenge
+* The URL of the deployed application: https://lulose.github.io/Lockandkeys-Password-Generator/
+* The URL of the GitHub Repository: https://github.com/lulose/Lockandkeys-Password-Generator
 
 </br>
 
