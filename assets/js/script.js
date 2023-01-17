@@ -143,21 +143,23 @@ function getRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// // Function to generate password with user input
-// function generatePassword() {
+// Main function to generate password with user input of "Length" and "Character Set" options.
+// If the "getPasswordOptions" function is exited it will generate a blank output and reset the text box,
+// and will display the placeholder.
+function generatePassword() {
+  var password = [];
+  var passwordOptions = getPasswordOptions();  
+  if (passwordOptions !== false) {
+    for (i = 0; i < passwordOptions[0]; i++) {
+      password[i] =  getRandom(passwordOptions[1]);
+    }
+  }
+  password = password.join("");
+  //  Password written to the page:
+  var passwordText = document.querySelector('#password');
+  passwordText.value = password;
+}
 
-// }
-
-// // Get references to the #generate element
-// var generateBtn = document.querySelector('#generate');
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector('#password');
-
-//   passwordText.value = password;
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener('click', writePassword);
+// Btn functionality:
+var generateBtn = document.querySelector('#generate');
+generateBtn.addEventListener('click', generatePassword);
