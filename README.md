@@ -5,6 +5,12 @@ The methods I selected to implement in the Javascript file were to reflect what 
 
 I wanted to add extra functionality to the project in that the "Cancel" button presented in the "Confirm" parts of the code would not exit the function, effectively locking the user into a never ending cycle until they went through the whole function or gave up and closed the page. This could add considerable frustration for users and by adding a way to escape this would promote the webpage.
 
+Locally the project ran fine with linking resources such as:
+> link rel="stylesheet" type="text/css" href="./assets/css/style.css"
+
+However GitHub Pages was not functioning with said links, and was edited to be linked as:
+> link rel="stylesheet" type="text/css" href="../05-Challenge/assets/css/style.css"
+
 <br>
 
 ___
@@ -26,7 +32,7 @@ ___
 ## User Story 
 The following image shows the web application's appearance and functionality:
 
-![password generator demo](./assets/images/05-javascript-challenge-demo.png)
+![password generator demo](../05-Challenge/assets/images/05-javascript-challenge-demo.png)
 
 * Generate a password when the button is clicked
   * Present a series of prompts for password criteria
