@@ -88,10 +88,55 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// // Function to prompt user for password options
-// function getPasswordOptions() {
-
-// }
+function getPasswordOptions() {
+  let i = true;
+  while (true) {
+    optionLength = prompt("Please enter the desired length of your password, between 10-64 Characters:");
+    // This method allows the cancel button to stop the function early, reducing possible frustration for the user:
+    if (optionLength === null) {
+      return false;
+    // Check for valid inputs:
+    } else if (optionLength === "") {
+      alert("That is not a number! Please try again!");
+    } else if (isNaN(optionLength)) {
+      alert("That is not a number! Please try again!");
+    } else if (parseInt(optionLength) < 10) {
+      alert("That is too short! Please try again!");
+    } else if (parseInt(optionLength) > 64) {
+      alert("That is too long! Please try again!");
+    // Select arrays to generate the character set:
+    } else while (i === true) {
+      var optionLowerCase = confirm("Would you like to include Lowercase characters?");
+      var optionUpperCase = confirm("Would you like to include Uppercase characters?");
+      var optionNumeric = confirm("Would you like to include Numeric characters?");
+      var optionSpecial = confirm("Would you like to include Special characters ($@%&*, etc)?");
+      // This method allows the cancel button to stop the function early, reducing possible frustration for the user:
+      if (optionLowerCase === false && optionUpperCase === false && optionNumeric === false && optionSpecial === false) {
+        i = confirm("Please select at least one character type!");
+      } else {
+        // Concat arrays to generate the character set:
+        var charSet = [];
+        if (optionLowerCase === true) {
+          charSet = charSet.concat(lowerCasedCharacters);
+        }
+        if (optionUpperCase === true) {
+          charSet = charSet.concat(upperCasedCharacters);
+        }
+        if (optionNumeric === true) {
+          charSet = charSet.concat(numericCharacters);
+        }
+        if (optionSpecial === true) {
+          charSet = charSet.concat(specialCharacters);
+        }
+        return [parseInt(optionLength), charSet];
+      }
+    // This method allows the cancel button to stop the function early, reducing possible frustration for the user:  
+      if (i === false) {
+        return false;
+      }
+    }
+  }
+}
 
 // // Function for getting a random element from an array
 // function getRandom(arr) {
